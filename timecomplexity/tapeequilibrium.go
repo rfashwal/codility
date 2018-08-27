@@ -9,10 +9,6 @@ func Solution(A []int) int {
 		return sumRight
 	}
 	if n == 2 {
-		diff := Abs(sumRight - sumLeft)
-		if minNumber > diff {
-			minNumber = diff
-		}
 		return minNumber
 	}
 	for i := 1; i < n-1; i++ {
