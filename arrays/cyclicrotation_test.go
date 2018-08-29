@@ -19,6 +19,7 @@ func TestCyclicRotation(t *testing.T) {
 			name: "Test 1",
 			args: args{
 				A: []int{3, 8, 9, 7, 6},
+<<<<<<< HEAD
 				K: 3,
 			},
 			want: []int{9, 7, 6, 3, 8},
@@ -38,5 +39,16 @@ func TestCyclicRotation(t *testing.T) {
 				t.Errorf("CyclicRotation() = %v, want %v", got, tt.want)
 			}
 		})
+=======
+				K: 6,
+			},
+			want: []int{6, 3, 8, 9, 7},
+		},
+	}
+	for _, tt := range tests {
+		if got := CyclicRotation(tt.args.A, tt.args.K); !reflect.DeepEqual(got, tt.want) {
+			t.Errorf("%q. CyclicRotation() = %v, want %v", tt.name, got, tt.want)
+		}
+>>>>>>> 11cc22cec302a686b6a64e41583deb7ddce7e95c
 	}
 }
